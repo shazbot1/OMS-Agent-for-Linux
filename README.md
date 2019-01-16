@@ -9,7 +9,7 @@ For domains other than opinsights.azure.com (ex: public), include the domain (-d
 ```
 $> wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY>
 ```
-For domains other than opinsights.azure.com (ex: public), include the domain (-d) parameter.
+For domains other than opinsights.azure.com (ex: MAG subscriptions), include the domain (-d) parameter.
 ```
 $> wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY> -d <DOMAIN>
 ```
