@@ -5,8 +5,13 @@ Welcome to the OMS Agent for Linux! The OMS Agent for Linux enables rich and rea
 
 ## Quick Install guide
 Run the following commands to download the omsagent, validate the checksum, and install+onboard the agent. *Commands are for 64-bit*. The Workspace ID and Primary Key can be found inside the OMS Portal under Settings in the **connected sources** tab.
+For domains other than opinsights.azure.com (ex: public), include the domain (-d) parameter (ex: -d opinsights.azure.us).
 ```
 $> wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY>
+```
+For domains other than opinsights.azure.com (ex: public), include the domain (-d) parameter.
+```
+$> wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY> -d <DOMAIN>
 ```
 ## Azure Install guide
 If you are an Azure customer, we have an Azure VM Extension that allows you to onboard with a couple of clicks.
