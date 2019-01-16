@@ -8,9 +8,9 @@ Run the following commands to download the omsagent, validate the checksum, and 
 ```
 $> wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY>
 ```
-For domains other than opinsights.azure.com (ex: MAG subscriptions), include the domain (-d) parameter.
+If you're using a cloud service other than Azure public cloud (opinsights.azure.com), you must add the -d parameter that identifies the domain that's to be used.  For example, if you use the Azure US Government cloud, run the following command:
 ```
-$> wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY> -d <DOMAIN>
+$> wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY> -d opinsights.azure.us
 ```
 ## Azure Install guide
 If you are an Azure customer, we have an Azure VM Extension that allows you to onboard with a couple of clicks.
